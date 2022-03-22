@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", fadeOutEffect);
+
+function fadeOutEffect() {
+  var fadeTarget = document.getElementById("loader");
+  var fadeEffect = setInterval(function () {
+      if (!fadeTarget.style.opacity) {
+          fadeTarget.style.opacity = 1;
+      }
+      if (fadeTarget.style.opacity > 0) {
+          fadeTarget.style.opacity -= 0.1;
+      } else {
+          clearInterval(fadeEffect);
+      }
+  }, 100);
+}
+
 // Set the date we're counting down to
 var countDownDate = new Date("April 30, 2022 15:37:25").getTime();
 
@@ -17,8 +33,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("countdown").innerHTML = days + " d " + hours + " h "
-  + minutes + " m " + seconds + " s ";
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {

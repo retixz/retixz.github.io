@@ -6,9 +6,11 @@ body{
     margin: 0;
     text-transform: uppercase;
 }
+
 h1{
     font-size: 56px;
 }
+
 p{
     font-size: 42px;
 }
@@ -20,3 +22,12 @@ p{
     align-items: center;
     height: 100vh;
 }
+
+.loader{
+    position: absolute;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f2f6;
+} 
+
